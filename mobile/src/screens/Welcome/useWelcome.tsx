@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { router } from "../../constants/router";
+import { router } from "../../constants/routers";
 
 type Welcome = {
   handleClick: () => void;

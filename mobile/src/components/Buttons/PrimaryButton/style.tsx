@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
-import { Text } from "react-native";
-import { colors } from "../../../colors/colors";
+import { colors } from "../../../constants/colors";
+
 export const Container = styled.TouchableOpacity`
   border-radius: 8px;
   background-color: ${colors.activeButton};
@@ -12,7 +12,7 @@ export const Container = styled.TouchableOpacity`
   justify-content: center;
 `;
 
-export const CustomText = styled(Text)`
+export const CustomText = styled.Text`
   color: #fff;
   font-size: 16px;
   text-align: center;
