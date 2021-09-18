@@ -6,11 +6,12 @@ export const Container = styled.View`
   display: flex;
   flex: 1;
   align-items: center;
+  justify-content: center;
 `;
 
 export const LogoApp = styled.Image`
-  width: 50%;
-  height: 40%;
+  width: 200px;
+  height: 250px;
 `;
 
 export const Wrapper = styled.View`
