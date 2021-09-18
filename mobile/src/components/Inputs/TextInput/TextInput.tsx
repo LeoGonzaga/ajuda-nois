@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Input } from './styled';
+import { Input } from './styles';
 
 export const TextInput: React.FC = () => {
   return <Input/>;

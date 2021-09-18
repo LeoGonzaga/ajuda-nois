@@ -1,11 +1,13 @@
 import React from "react";
+import { Container, CustomText } from "./style";
 
-import { Container, CustomText } from "./styled";
-
-export const PrimaryButton: React.FC = () => {
+type Button = {
+  text: string;
+};
+export const PrimaryButton = ({ text }: Button): JSX.Element => {
   return (
     <Container>
-      <CustomText>Entrar</CustomText>
+      <CustomText>{text}</CustomText>
     </Container>
   );
 };
