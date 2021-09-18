@@ -12,10 +12,12 @@
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["./assets/*"],
+      "@screens/*": ["./src/screens/*"],
       "@components/*": ["./src/components/*"],
       "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
       "@colors/*": ["./src/colors/*"],
+      "@routers/*": ["./src/routes/*"],
       "@constants/*": ["./src/constants/*"],
     }
   }

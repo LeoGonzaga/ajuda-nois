@@ -3,10 +3,11 @@ import { Container, CustomText } from "./style";
 
 type Button = {
   text: string;
+  handleClick: () => any;
 };
-export const PrimaryButton = ({ text }: Button): JSX.Element => {
+export const PrimaryButton = ({ text, handleClick }: Button): JSX.Element => {
   return (
-    <Container>
+    <Container onPress={handleClick}>
       <CustomText>{text}</CustomText>
     </Container>
   );
