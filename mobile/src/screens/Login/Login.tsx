@@ -1,12 +1,12 @@
 import React from "react";
 import { Text } from "react-native";
 import { Container, LogoApp, Title, SubTitle } from "./styled";
-import Logo from "../../../assets/icon.png";
 import { PrimaryButton } from "../../components/Buttons/PrimaryButton";
+import { SvgComponent } from "../../components/Svg";
 export const Login: React.FC = () => {
   return (
     <Container>
-      <LogoApp source={Logo} width={40} />
+      <SvgComponent/>
       <Title>AJUDA NOIS</Title>
       <PrimaryButton />
       <SubTitle>
