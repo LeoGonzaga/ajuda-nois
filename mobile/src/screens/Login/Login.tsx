@@ -1,13 +1,13 @@
 import React from "react";
 import { Text } from "react-native";
-import { Container, LogoApp, Title, SubTitle } from "./styled";
-import { PrimaryButton } from "../../components/Buttons/PrimaryButton";
-import { SvgComponent } from "../../components/Svg";
+import { Container, Title, SubTitle } from "./styled";
+import { PrimaryButton } from "@components/Buttons/PrimaryButton";
+
+
 export const Login: React.FC = () => {
   return (
     <Container>
-      <SvgComponent/>
-      <Title>AJUDA NOIS</Title>
+      <Title>AJUDA NOaaaaaaaaaaaIS</Title>
       <PrimaryButton />
       <SubTitle>
         <Text>
