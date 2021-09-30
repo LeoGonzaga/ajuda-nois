@@ -3,9 +3,10 @@ import { colors } from "../../../constants/colors";
 export const Input = styled.TextInput`
   border: none;
   padding: 5px;
-  width: 95%;
   height: 55px;
-  border-radius: 10px;
+  margin:0px 2px;
+  margin-bottom: 10px;
+  border-radius: 4px;
   background-color: ${colors.inputBackground};
   color: ${colors.inputColor};
   &::placeholder {

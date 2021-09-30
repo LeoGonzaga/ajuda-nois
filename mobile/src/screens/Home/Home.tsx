@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-import { Container } from "./styles";
 import { Flex } from "@components/Flex/Flex";
 import { Typography } from "@components/Typography";
 import { TextInput } from "@components/Inputs/TextInput";
 import { SubjectCard } from "@components/SubjectCard";
-import { FlatList, SafeAreaView, Text } from "react-native";
-import { colors } from "../../constants/colors";
+import { FlatList } from "react-native";
 
 const DATA = [
   {
@@ -38,9 +36,7 @@ export const Home = (): JSX.Element => {
     setText(value);
   };
   return (
-    <SafeAreaView
-      style={{ flex: 1, backgroundColor: colors.primary, alignItems: "center", marginTop:40, padding:10 }}
-    >
+    <>
       <Flex align="flex-start">
         <Typography size={28}>O que vamos {"\n"}estudar hoje?</Typography>
         <Typography size={20}>Selecione a matéria para começarmos</Typography>
@@ -61,6 +57,6 @@ export const Home = (): JSX.Element => {
         )}
         keyExtractor={(item) => item.id}
       />
-    </SafeAreaView>
+    </>
   );
 };
