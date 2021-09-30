@@ -7,4 +7,8 @@ export const Container = styled.View`
   border-radius: 10px;
   background-color: ${colors.subjectBackground};
   margin: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

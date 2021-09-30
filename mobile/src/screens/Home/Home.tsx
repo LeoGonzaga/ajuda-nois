@@ -5,28 +5,66 @@ import { Flex } from "@components/Flex/Flex";
 import { Typography } from "@components/Typography";
 import { TextInput } from "@components/Inputs/TextInput";
 import { SubjectCard } from "@components/SubjectCard";
+
+import Redacao from "../../../assets/subjects/bio.png";
+import Filo from "../../../assets/subjects/filo.png";
+import Historia from "../../../assets/subjects/history.png";
+import Litera from "../../../assets/subjects/litera.png";
+import Mathi from "../../../assets/subjects/math.png";
+import Rename1 from "../../../assets/subjects/rename1.png";
+import Rename2 from "../../../assets/subjects/rename2.png";
 import { Container } from "./styles";
 
 const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-a3sed5-3ad53abb28ba",
-    title: "First Item",
+    title: "Redação",
+    image: Redacao,
   },
   {
     id: "3ac68afc-c605-48d3-a43f8-fbd91aa97f63",
-    title: "Second Item",
+    title: "Filosofia",
+    image: Filo,
   },
   {
     id: "58694a0f-3da1-471f-2-145571e29d72",
-    title: "Third Item",
+    title: "Matemática",
+    image: Historia,
   },
   {
     id: "58694a0f-3da1-471f-bd962-145571e29d72",
-    title: "Third Item",
+    title: "Biologia",
+    image: Litera,
   },
   {
     id: "58694a0f-3da1-471f-bd916-145571e29d72",
-    title: "Third Item",
+    title: "História",
+    image: Mathi,
+  },
+  {
+    id: "bd7acbea-c1b1-46c2-a3sed5-3ad53abb28ba",
+    title: "Inglês",
+    image: Rename2,
+  },
+  {
+    id: "3ac68afc-c605-48d3-a43f8-fbd91aa97f63",
+    title: "Espanhol",
+    image: Rename1,
+  },
+  {
+    id: "58694a0f-3da1-471f-2-145571e29d72",
+    title: "Geografia",
+    image: Redacao,
+  },
+  {
+    id: "58694a0f-3da1-471f-bd962-145571e29d72",
+    title: "Física",
+    image: Redacao,
+  },
+  {
+    id: "58694a0f-3da1-471f-bd916-145571e29d72",
+    title: "Química",
+    image: Redacao,
   },
 ];
 export const Home = (): JSX.Element => {
@@ -50,11 +88,13 @@ export const Home = (): JSX.Element => {
       />
       <FlatList
         data={DATA}
-        renderItem={() => (
-          <Flex direction="row">
-            <SubjectCard />
-            <SubjectCard />
-          </Flex>
+        numColumns={2}
+        columnWrapperStyle={{
+          flex: 1,
+          justifyContent: "space-around",
+        }}
+        renderItem={({ item }) => (
+          <SubjectCard title={item.title} image={item.image} />
         )}
         keyExtractor={(item) => item.id}
       />
