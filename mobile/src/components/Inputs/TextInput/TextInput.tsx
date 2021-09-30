@@ -1,4 +1,5 @@
 import React from "react";
+import { colors } from "../../../constants/colors";
 
 import { Input } from "./styles";
 
@@ -14,6 +15,11 @@ export const TextInput = ({
   value,
 }: Props): JSX.Element => {
   return (
-    <Input placeholder={placeholder} value={value} onChangeText={onChange} />
+    <Input
+      placeholder={placeholder}
+      placeholderTextColor={colors.inputColor}
+      value={value}
+      onChangeText={onChange}
+    />
   );
 };
