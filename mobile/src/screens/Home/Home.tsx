@@ -74,8 +74,8 @@ const DATA = [
 export const Home = (): JSX.Element => {
   const navigation = useNavigation();
 
-  const handleClick = useCallback(() => {
-    navigation.navigate(router.details);
+  const handleClick = useCallback((name) => {
+    navigation.navigate(router.details, { name });
   }, []);
 
   return (
@@ -102,7 +102,7 @@ export const Home = (): JSX.Element => {
           <SubjectCard
             title={item.title}
             image={item.image}
-            open={handleClick}
+            open={() => handleClick(item.title)}
           />
         )}
         keyExtractor={(item) => item.id}

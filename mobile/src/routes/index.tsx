@@ -34,7 +34,7 @@ function AppStack() {
         <Screen
           name="Details"
           component={Details}
-          options={{ title: "Detalhes" }}
+          options={({ route }: any) => ({ title: route.params.name })}
         />
       </Navigator>
     </NavigationContainer>

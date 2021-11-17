@@ -11,9 +11,11 @@ export const Card = (): JSX.Element => {
     setOpen(!open);
   }, [open]);
 
+ 
   return (
     <>
-      <Container onPress={handleToggle} open={open}>
+     <Spacing top={5} />
+      <Container onPress={handleToggle} open={open} >
         <Typography bold size={22}>
           Assunto 1
         </Typography>
