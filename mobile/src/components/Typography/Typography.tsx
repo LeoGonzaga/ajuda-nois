@@ -4,11 +4,12 @@ import { Container } from "./styles";
 type Props = {
   color?: string;
   size?: number;
-  children: any;
+  children: React.ReactNode;
+  bold?:boolean;
 };
-export const Typography = ({ color, size, children }: Props): JSX.Element => {
+export const Typography = ({ color, size, children,bold }: Props): JSX.Element => {
   return (
-    <Container color={color} size={size}>
+    <Container color={color} size={size} bold={bold}>
       {children}
     </Container>
   );

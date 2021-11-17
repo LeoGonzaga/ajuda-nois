@@ -1,1 +1,2 @@
-export { SubjectCard } from "./SubjectCard";
+import { SubjectCard } from "./SubjectCard";
+export default SubjectCard;

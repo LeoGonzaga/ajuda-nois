@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useCallback } from "react";
 import { FlatList } from "react-native";
+import { useNavigation } from "@react-navigation/core";
+import { router } from "../../constants/routers";
 
-import { Flex } from "@components/Flex/Flex";
-import { Typography } from "@components/Typography";
-import { TextInput } from "@components/Inputs/TextInput";
-import { SubjectCard } from "@components/SubjectCard";
+import Flex from "@components/Flex";
+import Typography from "@components/Typography";
+import SubjectCard from "@components/SubjectCard";
+import Spacing from "@components/Spacing";
 
 import Redacao from "../../../assets/subjects/bio.png";
 import Filo from "../../../assets/subjects/filo.png";
@@ -14,6 +16,7 @@ import Mathi from "../../../assets/subjects/math.png";
 import Rename1 from "../../../assets/subjects/rename1.png";
 import Rename2 from "../../../assets/subjects/rename2.png";
 import { Container } from "./styles";
+import { colors } from "../../constants/colors";
 
 const DATA = [
   {
@@ -67,25 +70,27 @@ const DATA = [
     image: Redacao,
   },
 ];
-export const Home = (): JSX.Element => {
-  const [text, setText] = useState("");
 
-  const handle = (value: any) => {
-    console.log(value);
-    setText(value);
-  };
+export const Home = (): JSX.Element => {
+  const navigation = useNavigation();
+
+  const handleClick = useCallback(() => {
+    navigation.navigate(router.details);
+  }, []);
+
   return (
     <Container>
+      <Spacing top={20} />
       <Flex align="flex-start">
         <Typography size={28}>O que vamos {"\n"}estudar hoje?</Typography>
-        <Typography size={20}>Selecione a matéria para começarmos</Typography>
-        <Typography size={20}>{text}</Typography>
+        <Spacing top={10} />
+
+        <Typography size={18} bold color={colors.subtitle}>
+          Selecione a matéria para começarmos
+        </Typography>
+        <Spacing bottom={10} />
       </Flex>
-      <TextInput
-        placeholder="Seleciona a matéria"
-        value={text}
-        onChange={handle}
-      />
+
       <FlatList
         data={DATA}
         numColumns={2}
@@ -94,7 +99,11 @@ export const Home = (): JSX.Element => {
           justifyContent: "space-around",
         }}
         renderItem={({ item }) => (
-          <SubjectCard title={item.title} image={item.image} />
+          <SubjectCard
+            title={item.title}
+            image={item.image}
+            open={handleClick}
+          />
         )}
         keyExtractor={(item) => item.id}
       />

@@ -1,1 +1,3 @@
-export { PrimaryButton } from "./PrimaryButton";
+import { PrimaryButton } from "./PrimaryButton";
+
+export default PrimaryButton;

@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { PrimaryButton } from "@components/Buttons/PrimaryButton";
-import { Spacing } from "@components/Spacing";
+import PrimaryButton from "@components/Buttons/PrimaryButton";
+import Spacing  from "@components/Spacing";
 import useWelcome from "./useWelcome";
 
 import logo from "../../../assets/initial.png";

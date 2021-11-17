@@ -10,7 +10,6 @@ const useWelcome = (): Welcome => {
   const navigation = useNavigation();
 
   const handleClick = useCallback(() => {
-    console.log(router.home);
     navigation.navigate(router.home);
   }, []);
 
