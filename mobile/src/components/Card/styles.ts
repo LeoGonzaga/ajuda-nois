@@ -21,19 +21,23 @@ export const ListItems = styled.View`
 `;
 
 export const Item = styled.TouchableOpacity`
-  height: 45px;
-  margin: 0px 10px 10px 10px;
   padding: 10px;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  border-radius: 8px;
+  margin: 10px;
   background-color: ${colors.secondary};
-  border-radius: 4px;
 `;
 
 export const FinishedItem = styled.View`
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
   background-color: green;
+  margin-right: 10px;
+`;
+
+export const Wrapper = styled.View`
+  width: 90%;
+  padding:12px;
 `;

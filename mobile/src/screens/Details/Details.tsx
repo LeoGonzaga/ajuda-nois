@@ -7,8 +7,8 @@ export const Details = (): JSX.Element => {
   const array = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   return (
     <Container>
-      {array.map((elem) => (
-        <Card />
+      {array.map((elem, index) => (
+        <Card key={index} />
       ))}
     </Container>
   );

@@ -6,5 +6,5 @@ export const Container = styled.SafeAreaView`
   flex: 1;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 30px 10px 0px 10px;
 `;
