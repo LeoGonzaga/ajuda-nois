@@ -37,10 +37,16 @@ function AppStack() {
           component={Details}
           options={({ route }: any) => ({ title: route.params.name })}
         />
-          <Screen
+        <Screen
           name="Content"
           component={Content}
-          options={({ route }: any) => ({ title: route.params.name })}
+          options={({ route }: any) => ({
+            title: route.params.name,
+            headerStyle: {
+              backgroundColor: route.params.color,
+              elevation:0
+            },
+          })}
         />
       </Navigator>
     </NavigationContainer>

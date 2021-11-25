@@ -3,19 +3,19 @@ import Spacing from "@components/Spacing";
 import Typography from "@components/Typography";
 import { useNavigation } from "@react-navigation/core";
 import { router } from "../../constants/routers";
-
+import { colors } from "../../constants/colors";
 import { Container, FinishedItem, Item, ListItems, Wrapper } from "./styles";
 
 export const Card = (): JSX.Element => {
   const navigation = useNavigation();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const handleToggle = useCallback(() => {
     setOpen(!open);
   }, [open]);
 
   const handleClick = useCallback((name) => {
-    navigation.navigate(router.content, { name });
+    navigation.navigate(router.content, { name, color: colors.activeButton });
   }, []);
 
   const DESCRIPTION =
@@ -42,7 +42,7 @@ export const Card = (): JSX.Element => {
               </Wrapper>
             </Item>
 
-             <Item onPress={() => handleClick("Tópico 2")}>
+            <Item onPress={() => handleClick("Tópico 2")}>
               <FinishedItem />
               <Wrapper>
                 <Typography bold>Tópico 2</Typography>
@@ -52,7 +52,7 @@ export const Card = (): JSX.Element => {
               </Wrapper>
             </Item>
 
-             <Item onPress={() => handleClick("Tópico 3")}>
+            <Item onPress={() => handleClick("Tópico 3")}>
               <FinishedItem />
               <Wrapper>
                 <Typography bold>Tópico 3</Typography>
