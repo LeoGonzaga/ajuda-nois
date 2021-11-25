@@ -2,5 +2,6 @@ export const router = {
   welcome: "Welcome",
   login: "Login",
   home: "Home",
-  details:"Details"
+  details:"Details",
+  content:"Content"
 };

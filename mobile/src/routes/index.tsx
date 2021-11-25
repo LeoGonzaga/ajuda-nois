@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Welcome from "../screens/Welcome";
 import Home from "../screens/Home";
 import Details from "../screens/Details";
+import Content from "../screens/Content";
 import { colors } from "../constants/colors";
 
 const { Navigator, Screen } = createStackNavigator();
@@ -34,6 +35,11 @@ function AppStack() {
         <Screen
           name="Details"
           component={Details}
+          options={({ route }: any) => ({ title: route.params.name })}
+        />
+          <Screen
+          name="Content"
+          component={Content}
           options={({ route }: any) => ({ title: route.params.name })}
         />
       </Navigator>
