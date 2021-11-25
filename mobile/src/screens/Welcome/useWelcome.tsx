@@ -1,5 +1,5 @@
-import { useCallback } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { useCallback } from "react";
 import { router } from "../../constants/routers";
 
 type Welcome = {

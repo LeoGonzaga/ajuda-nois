@@ -1,11 +1,11 @@
+import PrimaryButton from "@components/Buttons/PrimaryButton";
+import Spacing from "@components/Spacing";
 import React from "react";
 import { View } from "react-native";
-import PrimaryButton from "@components/Buttons/PrimaryButton";
-import Spacing  from "@components/Spacing";
+import logo from "../../../assets/initial.png";
+import { Container, Logo, SubTitle, Title } from "./styles";
 import useWelcome from "./useWelcome";
 
-import logo from "../../../assets/initial.png";
-import { Container, Title, SubTitle, Logo } from "./styles";
 
 export const Welcome: React.FC = () => {
   const { handleClick } = useWelcome();

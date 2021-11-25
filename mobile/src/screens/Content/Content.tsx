@@ -1,10 +1,11 @@
-import React from "react";
-import Typography from "@components/Typography";
-
-import { Container, Header, PDFFile, Wrapper, ButtonWrapper } from "./styles";
-import Spacing from "@components/Spacing";
-import { FlatList } from "react-native";
 import PrimaryButton from "@components/Buttons/PrimaryButton";
+import Spacing from "@components/Spacing";
+import Typography from "@components/Typography";
+import React from "react";
+import { Dimensions, FlatList, StyleSheet } from "react-native";
+import logo from "../../../assets/initial.png";
+import { ButtonWrapper, Container, Header, Logo, PDFFile, Wrapper } from "./styles";
+
 
 export const Content: React.FC = () => {
   const DATA = [
@@ -22,16 +23,19 @@ export const Content: React.FC = () => {
     },
   ];
 
-  const Item = ({ title }) => (
+  const Item = ({ title }: any) => (
     <PDFFile>
       <Typography>{title}</Typography>
     </PDFFile>
   );
-  const renderItem = ({ item }) => <Item title={item.title} />;
+  const renderItem = ({ item }: any) => <Item title={item.title} />;
   return (
     <Container>
-      <Header></Header>
+      <Header>
+        <Logo source={logo} resizeMode="contain" />
+      </Header>
       <Wrapper>
+        <Spacing top={20} />
         <Typography>
           A trigonometria é a área da matemática que estuda a relação entre a
           medida dos lados de um triângulo e seus ângulos. Temos como principais
@@ -62,10 +66,28 @@ export const Content: React.FC = () => {
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
         />
+
+        <Spacing top={10} />
+        <Typography bold size={26}>
+          Exercícios
+        </Typography>
+        <Spacing bottom={10} />
         <ButtonWrapper>
-          <PrimaryButton text="Iniciar QUIZ" handleClick={() => {}} />
+          <PrimaryButton text="Iniciar QUIZ" handleClick={() => { }} />
         </ButtonWrapper>
       </Wrapper>
     </Container>
   );
 };
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  pdf: {
+    flex: 1,
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+    marginBottom: 20,
+    overflow: 'scroll'
+  }
+});

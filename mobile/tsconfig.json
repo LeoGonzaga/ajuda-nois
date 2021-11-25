@@ -16,7 +16,6 @@
       "@components/*": ["./src/components/*"],
       "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
-      "@colors/*": ["./src/constants/colors/index"],
       "@routers/*": ["./src/routes/*"],
       "@constants/*": ["./src/constants/*"],
     }
