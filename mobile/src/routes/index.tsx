@@ -12,7 +12,6 @@ import PreviousTests from "../screens/PreviousTests";
 import Quiz from "../screens/Quiz";
 import Welcome from "../screens/Welcome";
 
-
 const { Navigator, Screen } = createStackNavigator();
 const Drawer = createDrawerNavigator();
 function Root() {
@@ -21,9 +20,11 @@ function Root() {
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Tests" component={PreviousTests} />
       <Drawer.Screen name="Achevement" component={Achevement} />
-      <Drawer.Screen name="Pomodoro" component={Pomodoro} options={
-        { title: "Pomodoro" }
-      } />
+      <Drawer.Screen
+        name="Pomodoro"
+        component={Pomodoro}
+        options={{ title: "Pomodoro" }}
+      />
       <Drawer.Screen name="Quiz" component={Quiz} />
     </Drawer.Navigator>
   );
@@ -41,11 +42,7 @@ function AppStack() {
           },
         }}
       >
-        <Screen
-          name="Root"
-          component={Root}
-          options={{ headerShown: false }}
-        />
+        <Screen name="Root" component={Root} options={{ headerShown: false }} />
         <Screen
           name="Welcome"
           component={Welcome}
@@ -68,11 +65,10 @@ function AppStack() {
             title: route.params.name,
             headerStyle: {
               backgroundColor: route.params.color,
-              elevation: 0
+              elevation: 0,
             },
           })}
         />
-
       </Navigator>
     </NavigationContainer>
   );
