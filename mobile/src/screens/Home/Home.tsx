@@ -1,7 +1,9 @@
+
 import Flex from "@components/Flex";
 import Spacing from "@components/Spacing";
 import SubjectCard from "@components/SubjectCard";
 import Typography from "@components/Typography";
+import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/core";
 import React, { useCallback } from "react";
 import { FlatList } from "react-native";
@@ -15,6 +17,8 @@ import Rename2 from "../../../assets/subjects/rename2.png";
 import { colors } from "../../constants/colors";
 import { router } from "../../constants/routers";
 import { Container } from "./styles";
+
+
 
 
 const DATA = [
@@ -81,9 +85,11 @@ export const Home = (): JSX.Element => {
     <Container>
       <Spacing top={20} />
       <Flex align="flex-start">
-        <Typography size={26}>O que vamos {"\n"}estudar hoje?</Typography>
+        <Flex direction="row" justify="space-between">
+          <Typography size={26}>O que vamos {"\n"}estudar hoje?</Typography>
+          <AntDesign name="user" size={25} color="#fff" />
+        </Flex>
         <Spacing top={10} />
-
         <Typography size={18} bold color={colors.subtitle}>
           Selecione a matéria para começarmos
         </Typography>

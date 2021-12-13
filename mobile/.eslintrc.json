@@ -7,7 +7,6 @@
   "plugins": [
     "@typescript-eslint",
     "react",
-    "simple-import-sort"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -50,21 +49,6 @@
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": [
       "error"
-    ],
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": true,
-        "ignoreDeclarationSort": true,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": [
-          "none",
-          "all",
-          "multiple",
-          "single"
-        ],
-        "allowSeparatedGroups": false
-      }
     ]
   }
 }

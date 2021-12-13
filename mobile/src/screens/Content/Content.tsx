@@ -2,7 +2,7 @@ import PrimaryButton from "@components/Buttons/PrimaryButton";
 import Spacing from "@components/Spacing";
 import Typography from "@components/Typography";
 import React from "react";
-import { Dimensions, FlatList, StyleSheet } from "react-native";
+import { FlatList } from "react-native";
 import logo from "../../../assets/initial.png";
 import { ButtonWrapper, Container, Header, Logo, PDFFile, Wrapper } from "./styles";
 
@@ -45,7 +45,7 @@ export const Content: React.FC = () => {
 
         <Spacing top={20} />
         <Typography bold size={26}>
-          PDF's
+          Material de apoio
         </Typography>
 
         <FlatList
@@ -79,15 +79,3 @@ export const Content: React.FC = () => {
     </Container>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  pdf: {
-    flex: 1,
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-    marginBottom: 20,
-    overflow: 'scroll'
-  }
-});

@@ -10,6 +10,7 @@ export const Header = styled.View`
   background-color: ${colors.activeButton};
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  
 `;
 
 export const Wrapper = styled.View`
